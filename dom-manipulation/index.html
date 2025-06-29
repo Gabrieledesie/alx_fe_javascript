@@ -8,12 +8,21 @@
 <body>
   <h1>Dynamic Quote Generator</h1>
 
+  <!-- Dropdown for filtering by category -->
+  <select id="categoryFilter" onchange="filterQuotes()">
+    <!-- Options will be populated dynamically -->
+  </select>
+
+  <!-- Display Section for Quotes -->
   <div id="quoteDisplay"></div>
+
+  <!-- Button to show a random quote -->
   <button id="newQuote">Show New Quote</button>
 
+  <!-- Container for the dynamically created quote form -->
   <div id="formContainer"></div>
 
-  <!-- JSON Import/Export Buttons -->
+  <!-- JSON Import/Export Controls -->
   <hr />
   <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
   <button onclick="exportToJsonFile()">Export Quotes to JSON</button>
